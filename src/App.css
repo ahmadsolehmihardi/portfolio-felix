@@ -1,38 +1,391 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rubik+Mono+One&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Rubik", sans-serif;
+}
+.container{
+  max-width: 80%;
+  margin: auto;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  
+}
+.nav ul{
+  list-style: none;
+}
+.nav ul a{
+  text-decoration: none;
+}
+/* ---------HEADER------------ */
+.header{
+  padding: 1.5em 0;
+}
+.header ul{
+  display: inline-block;
+}
+.header li{
+  display: inline-block;
+  margin-left: 1.5rem;
+}
+.header li a{
+  font-weight: 500;
+  transition: .5s;
+  color: black;
+}
+.header li a:hover{
+  color: aqua;
+  font-weight: 500;
+}
+.HeaderIcon{
+  margin-left: 1rem;
+  transform: .5s;
+}
+.navbar-item-icon{
+  display:none;
+  
+}
+.active{
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: rgba(0 0 0 /20%);
+  
+  box-shadow: 0 2px 28px rgba(0 0 0 /6%);
+  width: 100%;
+  z-index: 10;
+  transition: all 1s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* --------------------------------- */
+/* ---------HOME------------ */
+.h-right h1{
+  font-size: 60px;
+  font-weight: 700;
+}
+.h-wrepper{
+  margin-top: 5rem;
+  margin-bottom: 4rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.h-left, .h-right{
+  width: 50%;
+  position: relative;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  gap: 5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.h-right ul {
+  list-style: none;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 0 3rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+.h-right ul li{
+  width: 50px;
+  height: 50px;
+  border: 1px solid salmon;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .8s;
+  
+}
+
+.h-right ul li .icon{
+  width: 30px;
+  height: 30px;
+}
+.h-right ul li:nth-child(1){
+  color: blue;
+}
+.h-right ul li:nth-child(1):hover{
+  color: blue;
+  background-color: aqua;
+  border: none;
+  
+}
+.h-right ul li:nth-child(2){
+  color: rebeccapurple;
+}
+.h-right ul li:nth-child(2):hover{
+  color: rebeccapurple;
+  background-color: pink;
+  border: none;
+}
+.h-right ul li:nth-child(3){
+  color: lightgreen;
+}
+.h-right ul li:nth-child(3):hover{
+  color: lightgreen;
+  background-color: rebeccapurple;
+  border: none;
+}
+.h-right ul li:nth-child(4){
+  color: lightcoral;
+}
+.h-right ul li:nth-child(4):hover{
+  color: lightcoral;
+  background-color: burlywood;
+  border: none;
+}
+.h-right ul li:nth-child(5){
+  color: orange;
+}
+.h-right ul li:nth-child(5):hover{
+  color: orange;
+  background-color: rebeccapurple;
+  border: none;
+}
+.h-right p{
+  margin-bottom: 2rem;
+}
+.h-button{
+ color: brown;
+}
+/* --------------------------------- */
+/* ---------branding------------ */
+
+.b-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.b-wrapper .container{
+  width: 80%;
+}
+.b-wrapper{
+  background-color: #08071c;
   color: white;
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+  margin-top: -4.3rem;
+}
+.b-grid .flex{
+  display: flex;
+  gap: .5em;
+  align-items:flex-start;
+  justify-content: flex-start;
+
+  
+}
+.text h1{
+  font-size: 25px;
+  color: aqua;
+}
+.para h2{
+  font-size: 25px;
+  margin-bottom: 1rem;
+}
+.para p{
+  font-size: 14px;
+  color:darkgray;
+}
+/* --------------------------------- */
+/* ---------about------------ */
+.a-wrapper{
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+}
+.heading h3{
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: green;
+  margin: .5rem 0;
+}
+.heading h1{
+  font-family: 45px;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+.top p{
+  margin-bottom: 2rem;
+  color: lightslategray;
+  font-size: 20px;
+  
+}
+.left{
+  padding-right: 6rem;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.top .h-button{
+  margin-top: 2.5rem;
+}
+.right img{
+ border-left: 5rem solid black;
+ border-right: 5rem solid black;
+}
+/* --------------------------------- */
+/* ---------services------------ */
+.S-wrapper{
+  margin-top: 15rem;
+  padding: 0 6rem;
+  margin-bottom: 5rem;
+}
+.tag-name{
+  text-align: center;
+}
+.tag-name h1{
+  font-family: 45px;
+  font-weight: 600;
+}
+.tag-name h2{
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: green;
+  margin: .5rem 0;
+}
+.tag-name p{
+  margin-top: 1.5rem;
+  
+  color: lightslategray;
+  font-size: 20px;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.flex1{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 5.5rem;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+/* --------------------------------- */
+/* ---------galery------------ */
+.g-wrapper{
+ margin: 4rem 0;
+ background-color:#08071c;
+
+}
+.g-wrapper .paddings{
+  padding: 6rem 6.5rem;
+  color: aliceblue;
+  text-align: center;
+}
+.paddings h4{
+  text-transform: uppercase;
+  color: aqua;
+  margin-bottom: 2rem;
+}
+.paddings h1{
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+.paddings p{
+  color: lightslategray;
+  font-size: 20px;
+  margin-bottom: 2.5rem;
+}
+/* --------------------------------- */
+/* ---------skills------------ */
+.s-wrapper{
+ padding: 5rem 0;
+
+}
+.container .heading{
+  text-align: center;
+  margin-bottom: 8rem;
+}
+.heading h3{
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: green;
+}
+.heading h1{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+.a-wrapper .flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  
+}
+.content .left{
+  width: 60%;
+}
+.content .right{
+  width: 40%;
+}
+.topMargin .skills{
+  margin-bottom: 2rem ;
+}
+
+.topMargin h1{
+  margin-bottom:1rem;
+}
+.left h1:nth-child(1){
+  color: lightgreen;
+}
+.left h1:nth-child(2){
+  color: lightslategray;
+}
+.right h1{
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.right p{
+  color: lightslategray;
+  font-size: 20px;
+  margin-bottom: 2.5rem;
+}
+
+/* --------------------------------- */
+
+.f-wrapper{
+  background-color: #08071c;
+}
+.f-wrapper .container{
+  padding: 2rem 6rem;
+  color: gray;
+  opacity: 50%;
+}
+
+.container .flex{
+  margin-top: 2rem;
+}
+.f-flex{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.f-flex p{
+  
+  color: white;
+  font-size: 15px;
+  margin-bottom: 2.5rem;
+}
+/* --------------------------------- */
+
+.page{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
